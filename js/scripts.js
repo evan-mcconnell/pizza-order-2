@@ -16,16 +16,20 @@ function Orders (name, size, base, meats, veggies, specials, cost) {
 
 Orders.prototype.totalCost = function () {
   if (this.size === "small") {
-    cost = 5;
+    cost = 6;
   } else if (this.size === "medium") {
-    cost = 8;
+    cost = 10;
   } else if (this.size === "large") {
-    cost = 12;
+    cost = 15;
   }
   cost += meats.length*1.5;
   cost += veggies.length*1;
   cost += specials.length*2;
   return cost;
+}
+
+Orders.prototype.totalToppings = function () {
+  return meats.length + veggies.length + specials.length;
 }
 //UI Logic
 $(document).ready( function() {
@@ -52,6 +56,9 @@ $(document).ready( function() {
     var newOrder = new Orders (name, size, base, meats, veggies, specials);
     newOrder.cost = newOrder.totalCost();
 
+    $(".order-name").text(newOrder.name);
+    $(".order-size").text(newOrder.size);
+    $(".total-toppings").text(newOrder.totalToppings());
     console.log(newOrder);
   });
 });
