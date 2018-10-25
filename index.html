@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pizza Order Up!</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body class="container-fluid">
+    <div class="jumbotron">
+      <h2>Pizza Order up!</h2>
+    </div>
+    <div class="">
+      <form id="pizza-order">
+        <div class="form-group">
+          <label for="name">Enter a name for the order:</label>
+          <input type="text" id="name">
+        </div>
+        <div class="form-group">
+          <label for="size">Pick your size: </label>
+          <select class="size" name="size">
+            <option value="small">Personal Pizza</option>
+            <option value="medium">Two-Person</option>
+            <option value="large">Family Sized</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <h4>Pick your base: </h4>
+          <div class="radio">
+            <label for="base"><input type="radio" name="cheese" value="italian-red">Italian blend cheese with Red Sauce</label>
+          </div>
+          <div class="radio">
+            <label for="base"><input type="radio" name="cheese" value="italian-green">Italian blend cheese with Pesto</label>
+          </div>
+          <div class="radio">
+            <label for="base"><input type="radio" name="cheese" value="vegan-red">Vegan "cheese" with Red Sauce</label>
+          </div>
+          <div class="radio">
+            <label for="base"><input type="radio" name="cheese" value="vegan-green">Vegan "cheese" with Pesto</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <h4>Meat Options:</h4>
+          <input type="checkbox" id="meatOp1" name="meat" value="pepperoni">
+          <label for="meatOp1">Pepperoni</label><br>
+          <input type="checkbox" id="meatOp2" name="meat" value="sausage">
+          <label for="meatOp2">Sausage</label><br>
+          <input type="checkbox" id="meatOp3" name="meat" value="bacon">
+          <label for="meatOp3">Canadian Bacon</label><br>
+          <input type="checkbox" id="meatOp4" name="meat" value="linguica">
+          <label for="meatOp4">Spicy Linguica</label><br>
+          <input type="checkbox" id="meatOp5" name="meat" value="chicken">
+          <label for="meatOp5">Grilled Chicken</label><br>
+        </div>
+        <div class="form-group">
+          <h4>Veggie Options:</h4>
+          <input type="checkbox" id="veggieOp1" name="veggie" value="mushrooms">
+          <label for="veggie">Mushrooms</label><br>
+          <input type="checkbox" id="veggieOp2" name="veggie" value="peppers">
+          <label for="veggie">Bell Peppers</label><br>
+          <input type="checkbox" id="veggieOp3" name="veggie" value="onions">
+          <label for="veggie">Onions</label><br>
+          <input type="checkbox" id="veggieOp4" name="veggie" value="olives">
+          <label for="veggie">Black Olives</label><br>
+          <input type="checkbox" id="veggieOp5" name="veggie" value="broccoli">
+          <label for="veggie">Broccoli</label><br>
+        </div>
+        <div class="form-group">
+          <h4>Specialty Toppings:</h4>
+          <input type="checkbox" id="specialOp1" name="special" value="prosciutto">
+          <label for="specialOp1">Prosciutto</label><br>
+          <input type="checkbox" id="specialOp2" name="special" value="wildMushroom">
+          <label for="specialOp2">Wild Mushroom</label><br>
+          <input type="checkbox" id="specialOp3" name="special" value="egg">
+          <label for="specialOp3">Quail Egg</label><br>
+          <input type="checkbox" id="specialOp4" name="special" value="mozzarella">
+          <label for="specialOp4">Fresh Mozzarella</label><br>
+          <input type="checkbox" id="specialOp5" name="special" value="salmon">
+          <label for="specialOp5">Smoked Salmon</label><br>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit your order when finished</button>
+      </form>
+
+    </div>
+
+  </body>
+</html>
