@@ -56,13 +56,19 @@ $(document).ready( function() {
       specials.push($(this).val());
     });
 
+
     var newOrder = new Orders (name, size, base, meats, veggies, specials);
     newOrder.cost = newOrder.totalCost();
+    var totalTopping = newOrder.totalToppings();
 
     $(".order-name").text(newOrder.name);
     $(".order-size").text(newOrder.size);
-    $(".total-toppings").text((newOrder.totalToppings()).length);
+    $(".total-toppings").text((totalTopping).length);
+    totalTopping.forEach( function(topping) {
+      $(".toppings").append("<li>" + topping + "</li>");
+    });
+    $(".order-cost").text(newOrder.cost);
 
-    console.log(newOrder);
+    $(".placed-orders").show();
   });
 });
