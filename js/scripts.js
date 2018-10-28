@@ -29,7 +29,10 @@ Orders.prototype.totalCost = function () {
 }
 
 Orders.prototype.totalToppings = function () {
-  return meats.length + veggies.length + specials.length;
+  // return meats.length + veggies.length + specials.length;
+  var allToppings = meats.concat(veggies, specials);
+  return allToppings;
+  console.log(allToppings);
 }
 //UI Logic
 $(document).ready( function() {
@@ -58,7 +61,8 @@ $(document).ready( function() {
 
     $(".order-name").text(newOrder.name);
     $(".order-size").text(newOrder.size);
-    $(".total-toppings").text(newOrder.totalToppings());
+    $(".total-toppings").text((newOrder.totalToppings()).length);
+
     console.log(newOrder);
   });
 });
