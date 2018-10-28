@@ -10,14 +10,10 @@
   </head>
   <body class="container-fluid">
     <div class="jumbotron jum">
-      <h2>Pizza Order up!</h2>
+      <h1>Pizza Order up!</h1>
     </div>
     <div class="">
       <form id="pizza-order">
-        <div class="form-group">
-          <label for="name">Enter a name for the order:</label>
-          <input type="text" id="name">
-        </div>
         <div class="form-group">
           <label for="size">Pick your size: </label>
           <select class="size" name="size">
@@ -88,7 +84,14 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-info">Submit your order when finished</button>
+        <br>
+        <br>
+        <div class="input-group name-submit">
+          <span class="input-group-btn">
+            <button class="btn btn-warning" type="submit">Submit your order</button>
+          </span>
+          <input type="text" id="name" class="form-control" placeholder="Name for the order">
+        </div>
       </form>
       <br>
       <br>

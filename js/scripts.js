@@ -3,7 +3,6 @@ var meats = [];
 var veggies = [];
 var specials = [];
 
-
 function Orders (name, size, base, meats, veggies, specials, cost) {
   this.name = name;
   this.size = size;
@@ -29,11 +28,11 @@ Orders.prototype.totalCost = function () {
 }
 
 Orders.prototype.totalToppings = function () {
-  // return meats.length + veggies.length + specials.length;
   var allToppings = meats.concat(veggies, specials);
   return allToppings;
   console.log(allToppings);
 }
+
 //UI Logic
 $(document).ready( function() {
   $("#pizza-order").submit( function(event) {
@@ -42,10 +41,12 @@ $(document).ready( function() {
     meats = [];
     veggies = [];
     specials = [];
+    $(".toppings").empty();
 
     var name = $("#name").val();
     var size = $(".size").val();
     var base = $("input[name='cheese']:checked").val();
+    name && size && base ? true : alert("Make sure you've chosen a base and entered a name for the order!")
     $("input[name='meat']:checked").each( function() {
       meats.push($(this).val());
     });
@@ -55,7 +56,6 @@ $(document).ready( function() {
     $("input[name='special']:checked").each( function() {
       specials.push($(this).val());
     });
-
 
     var newOrder = new Orders (name, size, base, meats, veggies, specials);
     newOrder.cost = newOrder.totalCost();

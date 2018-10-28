@@ -3,9 +3,29 @@
 }
 
 .jum {
-  background-color: #e2dbd9;
+  background-image: url('../images/pizza-vector.jpg');
+}
+
+.jum h1 {
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 .placed-orders {
   display: none;
+}
+
+.form-group {
+  padding: 8px;
+}
+
+.name-submit {
+  width: 30%;
+}
+
+ul {
+    list-style-image: url('../images/pizza1.png');
 }
